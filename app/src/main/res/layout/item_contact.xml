@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/tvNumberMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        tools:text="2"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:elevation="1dp"
+        app:layout_constraintTop_toTopOf="@id/vNewMessage"
+        app:layout_constraintBottom_toBottomOf="@id/vNewMessage"
+        app:layout_constraintStart_toStartOf="@id/vNewMessage"
+        app:layout_constraintEnd_toEndOf="@id/vNewMessage"/>
+
+    <View
+        android:id="@+id/vNewMessage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTimestamp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimestamp" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="16dp"
+        tools:text="Daniel"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="9:36 am" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Mensaje hgfjhgjk"
+        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
